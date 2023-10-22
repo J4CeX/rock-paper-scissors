@@ -1,0 +1,29 @@
+/* RESULTS */
+.results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0.5rem;
+}
+
+/* MOVES */
+
+.moves {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0.5rem;
+}
+
+/* CHOICES */
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem 0.5rem;
+}
+
+/* REST */
+
+figcaption {
+  text-align: center;
+}
