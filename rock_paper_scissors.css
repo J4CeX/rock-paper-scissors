@@ -5,6 +5,8 @@
 }
 
 :root {
+  --SHADOW-COLOR: #000;
+
   /* header */
   --HEADER-BGCOLOR: #333;
   --HEADER-COLOR: #fff;
@@ -12,6 +14,7 @@
   /* main */
   --MAIN-BGCOLOR: #dfdfdf;
   --MAIN-COLOR: #131313;
+  --IMG-BGCOLOR: #fefefe;
 
   /* footer */
   --FOOTER-BGCOLOR: #000;
@@ -166,11 +169,11 @@ main {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  box-shadow: 0 0 4px #000;
+  box-shadow: 0 0 4px var(--SHADOW-COLOR);
 }
 
 article {
-  width: 70%;
+  width: 600px;
 }
 
 /* RESULTS */
@@ -189,12 +192,31 @@ article {
   padding: 1rem 0.5rem;
 }
 
+.moves img {
+  background-color: var(--IMG-BGCOLOR);
+  padding: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px var(--SHADOW-COLOR);
+}
+
+.moves figcaption {
+  font-size: 32px;
+}
+
 /* CHOICES */
 
 .choices {
   display: flex;
   justify-content: space-evenly;
   padding: 1rem 0.5rem;
+}
+
+.choices button {
+  background-color: var(--IMG-BGCOLOR);
+  border-radius: 50%;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 3px var(--SHADOW-COLOR);
 }
 
 /* REST */
