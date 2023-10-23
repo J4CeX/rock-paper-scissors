@@ -7,6 +7,12 @@
 :root {
   --SHADOW-COLOR: #000;
 
+  /* reset */
+  --RESET-BCCOLOR-FOCUS: #000;
+  --RESET-COLOR-FOCUS: #fefefe;
+  --RESET-BGCOLOR: #fefefe;
+  --RESET-COLOR: #000;
+
   /* header */
   --HEADER-BGCOLOR: #333;
   --HEADER-COLOR: #fff;
@@ -218,6 +224,37 @@ article {
   padding: 10px;
   border: none;
   box-shadow: 0 0 3px var(--SHADOW-COLOR);
+  cursor: pointer;
+}
+
+.choices button:hover {
+  background-color: #000;
+  box-shadow: 0 0 3px #fff;
+}
+
+/* RESET */
+
+.reset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.reset .reset-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  background-color: var(--RESET-BGCOLOR);
+  border: none;
+  box-shadow: 0 0 3px var(--SHADOW-COLOR);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.reset button:hover {
+  background-color: var(--RESET-BCCOLOR-FOCUS);
+  color: var(--RESET-COLOR-FOCUS);
+  box-shadow: 0 0 3px var(--RESET-COLOR-FOCUS);
 }
 
 /* REST */

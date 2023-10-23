@@ -99,3 +99,14 @@ const play = (player, computer) => {
   localStorage.setItem("playerScore", JSON.stringify(playerScore));
   localStorage.setItem("computerScore", JSON.stringify(computerScore));
 }
+
+const reset = document.querySelector(".reset-button");
+reset.addEventListener("click", (event) => {
+  localStorage.clear();
+  playerScore = 0;
+  computerScore = 0;
+  const score = `${playerScore} | ${computerScore}`;
+  scoreOutput.innerHTML = `
+      <p>${score}</p>
+  `;
+});
