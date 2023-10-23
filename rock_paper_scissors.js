@@ -1,6 +1,23 @@
 let playerChoice = "";
 let computerChoice = "";
 
+let playerScore;
+let computerScore;
+
+playerScore = JSON.parse(localStorage.getItem("playerScore"));
+if(playerScore == null)
+  playerScore = 0;
+
+computerScore = JSON.parse(localStorage.getItem("computerScore"));
+if(computerScore == null)
+  computerScore = 0;
+
+const score = `${playerScore} | ${computerScore}`;
+const scoreOutput = document.querySelector(".score");
+scoreOutput.innerHTML = `
+    <p>${score}</p>
+`;
+  
 const rock = document.querySelector(".rock");
 rock.addEventListener("click", (event) => {
   player("rock");
@@ -58,14 +75,27 @@ const play = (player, computer) => {
     result = `Tie.`
   } else if(player == "rock" && computer == "paper") {
     result = `Computer wins!`;
+    computerScore++;
   } else if(player == "paper" && computer == "scissors") {
     result = `Computer wins!`;
+    computerScore++;
   } else if(player == "scissors" && computer == "rock") {
     result = `Computer wins!`;
+    computerScore++;
   } else {
     result = `Player wins!`;
+    playerScore++;
   }
+
+  const score = `${playerScore} | ${computerScore}`;
+
+  scoreOutput.innerHTML = `
+    <p>${score}</p>
+  `;
   resultOutput.innerHTML = `
     <p>${result}</p>
-    `;
+  `;
+
+  localStorage.setItem("playerScore", JSON.stringify(playerScore));
+  localStorage.setItem("computerScore", JSON.stringify(computerScore));
 }
