@@ -14,11 +14,12 @@
   --RESET-COLOR: #000;
 
   /* header */
-  --HEADER-BGCOLOR: #333;
+  --HEADER-BGCOLOR: #202020;
   --HEADER-COLOR: #fff;
 
   /* main */
-  --MAIN-BGCOLOR: #dfdfdf;
+  --MAIN-BGCOLOR-START: #F72585;
+  --MAIN-BGCOLOR-END: #4CC9F0;
   --MAIN-COLOR: #131313;
   --IMG-BGCOLOR: #fefefe;
 
@@ -67,15 +68,14 @@ header .logo a:any-link {
 
 main {
   min-height: 100vh;
-  width: 80vw;
-  background-color: var(--MAIN-BGCOLOR);
+  width: 100%;
+  background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
   color: var(--MAIN-COLOR);
-  margin: 50px auto 0;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  box-shadow: 0 0 4px var(--SHADOW-COLOR);
 }
 
 article {
@@ -88,6 +88,13 @@ article {
   flex-direction: column;
   align-items: center;
   padding: 1rem 0.5rem;
+  background-color: #ffffffcc;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 3px var(--SHADOW-COLOR);
+  margin-top: 20px;
 }
 
 /* MOVES */
@@ -104,6 +111,13 @@ article {
   border-radius: 50%;
   box-shadow: 0 0 4px var(--SHADOW-COLOR);
   overflow: visible;
+}
+
+.moves figure {
+  background-color: #ffffffa6;
+  padding: 0.5rem;
+  border-radius: 20px;
+  box-shadow: 0 0 3px var(--SHADOW-COLOR);
 }
 
 .moves figcaption {
